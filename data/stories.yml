@@ -1,0 +1,363 @@
+version: "2.0"
+
+stories:
+- story: happy path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_happy
+  - action: utter_happy
+  - intent: affirm
+  - action: utter_yes
+  - action: evenement_form
+  - active_loop: evenement_form
+
+- story: happy path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_happy
+  - action: utter_happy
+  - intent: deny
+  - action: utter_sorry
+  - action: utter_goodbye
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_unhappy
+  - intent: affirm
+  - action: utter_yes
+  - action: evenement_form
+  - active_loop: evenement_form
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_unhappy
+  - intent: deny
+  - action: utter_sorry
+  - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_happy
+  - action: utter_happy
+  - intent: get_time
+  - action: action_show_time
+  - action: utter_help
+  - intent: affirm
+  - action: utter_yes
+  - action: evenement_form
+  - active_loop: evenement_form
+  - slot_was_set:
+    - requested_slot: evenement
+  - intent: indifference
+  - action: utter_encourage
+  - or:
+    - intent: indifference
+    - intent: deny
+  - action: utter_sorry
+  - action: utter_goodbye
+
+- story: interactive_story_2
+  steps:
+  - intent: help
+  - action: utter_help
+  - intent: affirm
+  - action: utter_yes
+  - action: evenement_form
+  - active_loop: evenement_form
+  - slot_was_set:
+    - requested_slot: evenement
+  - intent: indifference
+  - action: utter_encourage
+  - intent: affirm
+  - active_loop: evenement_form
+
+- story: interactive_story_3
+  steps:
+  - intent: help
+  - action: utter_help
+  - intent: affirm
+  - action: utter_yes
+  - action: evenement_form
+  - active_loop: evenement_form
+  - slot_was_set:
+    - requested_slot: evenement
+  - slot_was_set:
+    - evenement: exposition
+  - slot_was_set:
+    - requested_slot: prix
+  - slot_was_set:
+    - prix: Conso
+  - slot_was_set:
+    - requested_slot: date
+  - slot_was_set:
+    - date: 30/05/2021
+  - active_loop: null
+  - action: action_submit
+  - or:
+    - intent: affirm
+    - intent: try_again
+  - action: evenement_form
+  - active_loop: evenement_form
+  - slot_was_set:
+    - date: 30/05/2021
+  - slot_was_set:
+    - prix: Conso
+  - slot_was_set:
+    - evenement: exposition
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_ask_evenement
+  - intent: intent_evenement
+    entities:
+    - evenement: exposition
+  - slot_was_set:
+    - evenement: exposition
+  - action: utter_ask_prix
+  - intent: intent_prix
+    entities:
+    - prix: Indifférent
+  - slot_was_set:
+    - prix: Indifférent
+  - action: utter_ask_date
+  - intent: intent_date
+    entities:
+    - date: 01/06/2021
+  - slot_was_set:
+    - date: 01/06/2021
+  - action: action_submit
+  - intent: thankyou
+  - action: utter_youarewelcome
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: interactive_story_4
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_happy
+  - action: utter_happy
+  - intent: indifference
+  - action: utter_encourage
+  - intent: affirm
+  - action: evenement_form
+  - active_loop: evenement_form
+  - slot_was_set:
+    - requested_slot: evenement
+  - slot_was_set:
+    - evenement: concert
+  - slot_was_set:
+    - evenement: concert
+  - slot_was_set:
+    - requested_slot: prix
+  - slot_was_set:
+    - prix: Payant
+  - slot_was_set:
+    - prix: Payant
+  - slot_was_set:
+    - requested_slot: date
+  - slot_was_set:
+    - date: 20/11/1992
+  - slot_was_set:
+    - date: null
+  - slot_was_set:
+    - requested_slot: date
+  - slot_was_set:
+    - date: 20/11/2021
+  - slot_was_set:
+    - date: 20/11/2021
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_submit
+  - or:
+    - intent: affirm
+    - intent: try_again
+  - action: evenement_form
+  - active_loop: evenement_form
+  - slot_was_set:
+    - date: 20/11/2021
+  - slot_was_set:
+    - prix: Payant
+  - slot_was_set:
+    - evenement: concert
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_ask_evenement
+  - intent: intent_evenement
+    entities:
+    - evenement: concert
+  - slot_was_set:
+    - evenement: concert
+  - action: utter_ask_prix
+  - intent: intent_prix
+    entities:
+    - prix: Indifférent
+  - slot_was_set:
+    - prix: Indifférent
+  - action: utter_ask_date
+  - intent: intent_date
+    entities:
+    - date: 25/12/2021
+  - slot_was_set:
+    - date: 25/12/2021
+  - action: action_submit
+  - intent: disappointment
+  - action: utter_sorry
+  - action: utter_goodbye
+
+- story: interactive_story_5
+  steps:
+  - intent: help
+  - action: utter_help
+  - intent: chitchat
+  - action: utter_chitchat
+  - intent: chitchat
+  - action: utter_chitchat
+  - intent: help
+  - action: utter_help
+  - intent: affirm
+  - action: utter_yes
+  - action: evenement_form
+  - active_loop: evenement_form
+  - slot_was_set:
+    - requested_slot: evenement
+  - slot_was_set:
+    - evenement: concert
+  - slot_was_set:
+    - evenement: concert
+  - slot_was_set:
+    - requested_slot: prix
+  - slot_was_set:
+    - prix: Indifférent
+  - slot_was_set:
+    - prix: Indifférent
+  - slot_was_set:
+    - requested_slot: date
+  - slot_was_set:
+    - date: 22/05/2021
+  - slot_was_set:
+    - date: 22/05/2021
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_submit
+  - intent: thankyou
+  - action: utter_youarewelcome
+
+- story: interactive_story_6
+  steps:
+  - intent: nlu_fallback
+  - action: action_two_stage_fallback
+  - active_loop: action_two_stage_fallback
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_unhappy
+  - intent: affirm
+  - action: utter_yes
+  - action: evenement_form
+  - active_loop: evenement_form
+  - slot_was_set:
+    - requested_slot: evenement
+  - intent: indifference
+  - action: utter_encourage
+  - intent: affirm
+  - action: utter_yes
+  - action: evenement_form
+  - slot_was_set:
+    - requested_slot: evenement
+  - intent: deny
+  - action: utter_sorry
+  - action: utter_goodbye
+
+- story: interactive_story_7
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: get_time
+  - action: action_show_time
+  - action: utter_help
+  - intent: chitchat
+  - action: utter_chitchat
+  - intent: chitchat
+  - action: utter_chitchat
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: interactive_story_8
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_happy
+  - action: utter_happy
+  - intent: affirm
+  - action: utter_yes
+  - action: evenement_form
+  - active_loop: evenement_form
+  - slot_was_set:
+    - requested_slot: evenement
+  - slot_was_set:
+    - evenement: concert
+  - slot_was_set:
+    - evenement: concert
+  - slot_was_set:
+    - requested_slot: prix
+  - slot_was_set:
+    - prix: Indifférent
+  - slot_was_set:
+    - prix: Indifférent
+  - slot_was_set:
+    - requested_slot: date
+  - slot_was_set:
+    - date: 23/05/2021
+  - slot_was_set:
+    - date: 23/05/2021
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_submit
+  - intent: affirm
+  - action: evenement_form
+  - active_loop: evenement_form
+  - slot_was_set:
+    - date: 23/05/2021
+  - slot_was_set:
+    - prix: Indifférent
+  - slot_was_set:
+    - evenement: concert
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_ask_evenement
+  - intent: intent_evenement
+    entities:
+    - evenement: exposition
+  - slot_was_set:
+    - evenement: exposition
+  - action: utter_ask_prix
+  - intent: intent_prix
+    entities:
+    - prix: Indifférent
+  - slot_was_set:
+    - prix: Indifférent
+  - action: utter_ask_date
+  - intent: intent_date
+    entities:
+    - date: 23/05/2021
+  - slot_was_set:
+    - date: 23/05/2021
+  - action: action_submit
+  - intent: deny
+  - action: utter_goodbye

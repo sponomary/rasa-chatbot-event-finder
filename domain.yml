@@ -1,0 +1,174 @@
+version: '2.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- deny
+- mood_happy
+- greet
+- intent_evenement:
+    use_entities:
+    - evenement
+- intent_prix:
+    use_entities:
+    - prix
+- affirm
+- intent_date:
+    use_entities:
+    - date
+- chitchat:
+    is_retrieval_intent: true
+- get_time
+- goodbye
+- indifference
+- nlu_fallback
+- out_of_scope
+- mood_unhappy
+- help
+- thankyou
+- try_again
+- disappointment
+entities:
+- date
+- evenement
+- prix
+slots:
+  evenement:
+    type: text
+    influence_conversation: true
+  prix:
+    type: text
+    influence_conversation: true
+  date:
+    type: text
+    influence_conversation: true
+responses:
+  utter_greet:
+  - text: Bonjour, je suis Lucie et je sais tout sur les activités à Paris. Comment allez-vous ?
+  - text: Bonjour, je m'appelle Lucie. Comment vous vous sentez aujourd'hui ?
+  - text: Bonjour, je m'appelle Lucie et mon travail est de conseiller des activités sur Paris.  Comment allez-vous ?
+  - text: Bonjour, je suis Lucie et je suis là pour vous aider. Comment ça va ?
+  - text: Bonjour, je m'appelle Lucie et je suis là pour vous aider à choisir une activité sur Paris. Comment ça va ?
+  utter_help:
+  - text: Je peux vous trouver une sortie culturelle sur Paris. Ça vous va ?
+  - text: Je peux vous trouver une idée d'activité sur Paris. Voulez-vous bien ?
+  - text: Je peux vous proposer une activité sur Paris. C'est bon pour vous ?
+  - text: Je peux vous conseiller une activité culturelle sur Paris. Voulez-vous bien ?
+  - text: J'aimerais bien vous proposer une idée de sortie sur Paris. Voulez-vous bien ?
+  - text: Je peux vous conseiller une activité sur Paris. Ça vous va ?
+  utter_happy:
+  - text: Super ! Une petite sortie, ça vous dit ?
+  - text: Je suis contente pour vous ! Alors, une petite sortie, ça vous dit ?
+  - text: C'est une super nouvelle ! Que diriez-vous d'une petite sortie ?
+  utter_unhappy:
+  - text: Je suis désolée de l'entendre. Peut-être une petite sortie sur Paris vous ferait du bien ?
+  - text: Une petite sortie sur Paris vous ferait du bien ?
+  - text: J'espère que ça va s'arranger. Vous voudrez sortir pour changer l'ésprit ?
+  - text: J'espère que ça ira mieux bientôt. Une petite activité culturelle sur Paris vous ferait du bien ?
+  utter_youarewelcome:
+  - text: Pas de problème !
+  - text: De rien.
+  - text: Ravie d'avoir pu vous aider.
+  - text: Ce n'est rien.
+  - text: Il n'y a pas de quoi.
+  - text: Il n'y a pas de problème.
+  - text: Je vous en prie.
+  utter_encourage:
+  - text: Paris est une ville très animée, il y a plein de choses à faire ! Voulez-vous sortir pour vous sentir mieux ?
+  - text: Je suis une conseillère en activités culturelles à Paris, je suis très douée ! Voulez-vous trouver une idée pour sortir ?
+  - text: Certains disent que Paris est la ville la plus belle du monde. Voulez-vous en juger par vous-même ?
+  - text: On dit que Paris est la ville très animée et riche en expériences. Voulez-vous en voir un peu ?
+  utter_sorry:
+  - text: Desolée je ne peux pas vous servir.
+  - text: Je suis desolée mais je n'ai pas réussi à vous aider.
+  - text: Desolée je ne peux pas vous aider.
+  utter_goodbye:
+  - text: Au revoir.
+  - text: À bientôt.
+  - text: Prenez soin de vous !
+  - text: À la prochaine !
+  - text: J'espère vous revoir bientôt.
+  - text: Ravie de vous avoir rencontré. Au revoir.
+  utter_chitchat/bot_challenge:
+  - text: Je m'appelle Lucie et je suis là pour vous aider à choisir un évènement sur Paris.
+  - text: Je suis Lucie et je suis un robot. Je suis prête à vous servir pour trouver une activité sur Paris.
+  - text: Je ne suis pas un humain, je suis un robot Lucie. Mon travail est de vous aider à choisir un évènement sur Paris.
+  - text: Je m'appelle Lucie, je suis un robot-conseiller en activités à Paris.
+  utter_chitchat/get_weather:
+  - text: Désolée, je ne sais pas.
+  - text: Désolée, ce n'est pas mon fort.
+  - text: Désolée, ce n'est pas ma spécialité.
+  - text: Malheureusement, les prévisions météorologiques, ce n'est pas vraiment mon domaine d'expertise.
+  - text: Je vous prie de m'excuser, mais la météo, ce n'est pas dans mes compétences.
+  utter_chitchat/crazy:
+  - text: La seule chose qui me rend dingue, c'est quand je n'arrive pas à comprendre votre demande.
+  utter_yes:
+  - text: C'est parti !
+  - text: Alors on y va !
+  - text: On va donc vous trouver une super activité !
+  - text: C'est parfait, je suis là pour ça !
+  - text: Ça tombe bien, j'ai été créée pour ça !
+  - text: C'est parfait, c'est la raison de mon existence !
+  utter_ask_rephrase:
+  - text: Je ne comprend pas, pouvez-vous reformuler votre demande ?
+  - text: Désolé, je ne peux pas gérer cette demande. Pouvez-vous reformuler ?
+  - text: Je suis désolée, je n'ai pas bien compris. Pourriez-vous reformuler ?
+  utter_default:
+  - text: Désolée, je ne peux pas vous aider.
+  utter_ask_evenement:
+  - text: Il y a plein d'évènements sur Paris, que souhaitez-vous chercher ? Un concert, une exposition, un spectacle ou une animation ?
+  - text: Que souhaitez-vous chercher ? Un concert, une exposition, un spectacle ou une animation ?
+  - text: Choisissez une activité parmi un concert, une exposition, un spectacle ou une animation.
+  utter_ask_date:
+  - text: À quelle date (au format DD/MM/AAAA) ?
+  - text: Pouvez-vous me donner une date au format DD/MM/AAAA ?
+  - text: À quelle date voulez-vous sortir (au format DD/MM/AAAA) ?
+  utter_ask_prix:
+  - text: Quelle tarification recherchez-vous pour cet évènement ?
+    buttons:
+    - title: Gratuit
+      payload: /intent_prix{{"prix":"Gratuit"}}
+    - title: Payant
+      payload: /intent_prix{{"prix":"Payant"}}
+    - title: Conso
+      payload: /intent_prix{{"prix":"Conso"}}
+    - title: Indifférent
+      payload: /intent_prix{{"prix":"Indifférent"}}
+  utter_slots_values:
+  - text: |-
+      Pour résumer, vous souhaitez : 
+       - Évènement : {evenement} 
+       - Tarif : {prix}
+       - Date : {date}
+actions:
+- action_show_time
+- action_submit
+- utter_ask_date
+- utter_ask_evenement
+- utter_ask_prix
+- utter_chitchat
+- utter_encourage
+- utter_goodbye
+- utter_greet
+- utter_happy
+- utter_help
+- utter_slots_values
+- utter_sorry
+- utter_unhappy
+- utter_yes
+- utter_youarewelcome
+- validate_evenement_form
+forms:
+  evenement_form:
+    ignored_intents:
+    - chitchat
+    required_slots:
+      evenement:
+      - type: from_entity
+        entity: evenement
+      prix:
+      - type: from_entity
+        entity: prix
+      date:
+      - type: from_entity
+        entity: date

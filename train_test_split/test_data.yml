@@ -1,0 +1,92 @@
+version: "2.0"
+nlu:
+- intent: chitchat/get_weather
+  examples: |
+    - la météo ?
+- intent: chitchat/crazy
+  examples: |
+    - tu es folle ?
+- intent: chitchat/bot_challenge
+  examples: |
+    - qui est là ?
+    - comment vous appelez vous ?
+- intent: get_time
+  examples: |
+    - quelle heure est-il ?
+- intent: disappointment
+  examples: |
+    - tu sers à rien
+- intent: mood_unhappy
+  examples: |
+    - j'ai connu mieux
+- intent: thankyou
+  examples: |
+    - merci
+- intent: indifference
+  examples: |
+    - je ne suis certain
+- intent: try_again
+  examples: |
+    - on peux recommencer ?
+    - encore !
+- intent: help
+  examples: |
+    - j'ai besoin d'aide
+    - j'ai besoin de toi
+- intent: deny
+  examples: |
+    - des clous !
+    - je ne suis pas d'accord
+    - n
+- intent: goodbye
+  examples: |
+    - à la prochaine
+    - à bientôt
+- intent: intent_date
+  examples: |
+    - a la date du [20/05/2021](date)
+    - [21/11/2021](date)
+    - [30/05/2021](date)
+- intent: greet
+  examples: |
+    - yo
+    - hi
+    - yo, ça roule ?
+- intent: mood_happy
+  examples: |
+    - bien
+    - tres bien
+    - trop bien
+- intent: chitchat
+  examples: |
+    - tu es dingue ?
+- intent: affirm
+  examples: |
+    - ça marche
+    - ouais
+    - c'est parfait
+    - parfait
+    - je suis d'accord
+- intent: intent_evenement
+  examples: |
+    - [concert](evenement)
+    - je souhaite voir les [animations]{"entity": "evenement", "value": "animation"}
+    - j'aimerais bien voir une [animation](evenement)
+    - je veux assister à un [concert](evenement)
+    - je recherche une [exposition](evenement)
+    - [exposition](evenement)
+- synonym: concert
+  examples: |
+    - concerts
+    - Concert
+- synonym: spectacle
+  examples: |
+    - spectacles
+- synonym: animation
+  examples: |
+    - animations
+- synonym: exposition
+  examples: |
+    - expo
+    - expos
+    - expositions

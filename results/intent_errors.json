@@ -1,0 +1,306 @@
+[
+  {
+    "text": "ça va bien ?",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "mood_happy",
+      "confidence": 0.9981932640075684
+    }
+  },
+  {
+    "text": "bye bye alors",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "help",
+      "confidence": 0.5550490617752075
+    }
+  },
+  {
+    "text": "je suis d'accord",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.7445778846740723
+    }
+  },
+  {
+    "text": "affirmatif",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "intent_evenement",
+      "confidence": 0.8481116890907288
+    }
+  },
+  {
+    "text": "c'est une bonne idée !",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.7879495620727539
+    }
+  },
+  {
+    "text": "jamais",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.8980011940002441
+    }
+  },
+  {
+    "text": "je veux rien de tout ça",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.9872755408287048
+    }
+  },
+  {
+    "text": "merci",
+    "intent": "thankyou",
+    "intent_prediction": {
+      "name": "mood_happy",
+      "confidence": 0.9463448524475098
+    }
+  },
+  {
+    "text": "ça peut aller",
+    "intent": "mood_happy",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.8773614168167114
+    }
+  },
+  {
+    "text": "pas mal",
+    "intent": "mood_happy",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.9436811208724976
+    }
+  },
+  {
+    "text": "bof",
+    "intent": "mood_unhappy",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.7052664756774902
+    }
+  },
+  {
+    "text": "bien sûr",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "mood_happy",
+      "confidence": 0.9784293174743652
+    }
+  },
+  {
+    "text": "je ne suis pas d'accord",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.9894710183143616
+    }
+  },
+  {
+    "text": "non, merci",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "thankyou",
+      "confidence": 0.4771804213523865
+    }
+  },
+  {
+    "text": "je m'en fous !",
+    "intent": "indifference",
+    "intent_prediction": {
+      "name": "help",
+      "confidence": 0.42561861872673035
+    }
+  },
+  {
+    "text": "ça va bien",
+    "intent": "mood_happy",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.916831910610199
+    }
+  },
+  {
+    "text": "une sortie me ferait du bien",
+    "intent": "mood_unhappy",
+    "intent_prediction": {
+      "name": "intent_evenement",
+      "confidence": 0.8959234356880188
+    }
+  },
+  {
+    "text": "au secours",
+    "intent": "help",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.582300066947937
+    }
+  },
+  {
+    "text": "salut",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.30312687158584595
+    }
+  },
+  {
+    "text": "à demain",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "chitchat",
+      "confidence": 0.7312467098236084
+    }
+  },
+  {
+    "text": "tout à fait",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "chitchat",
+      "confidence": 0.5763528347015381
+    }
+  },
+  {
+    "text": "ça marche",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "mood_happy",
+      "confidence": 0.74642014503479
+    }
+  },
+  {
+    "text": "absolument pas",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "chitchat",
+      "confidence": 0.6801117062568665
+    }
+  },
+  {
+    "text": "ça va",
+    "intent": "mood_happy",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.6807539463043213
+    }
+  },
+  {
+    "text": "j'ai connu mieux",
+    "intent": "mood_unhappy",
+    "intent_prediction": {
+      "name": "help",
+      "confidence": 0.8648940920829773
+    }
+  },
+  {
+    "text": "à la prochaine",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "chitchat",
+      "confidence": 0.323160856962204
+    }
+  },
+  {
+    "text": "y",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.8635428547859192
+    }
+  },
+  {
+    "text": "des clous !",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "indifference",
+      "confidence": 0.20207452774047852
+    }
+  },
+  {
+    "text": "comme un lundi",
+    "intent": "mood_happy",
+    "intent_prediction": {
+      "name": "chitchat",
+      "confidence": 0.9221326112747192
+    }
+  },
+  {
+    "text": "pas terrible",
+    "intent": "mood_unhappy",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.5379248261451721
+    }
+  },
+  {
+    "text": "fait-il beau ajourd'hui ?",
+    "intent": "chitchat",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.6596481204032898
+    }
+  },
+  {
+    "text": "quoi de neuf ?",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "chitchat",
+      "confidence": 0.9982408285140991
+    }
+  },
+  {
+    "text": "à bientôt",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "mood_happy",
+      "confidence": 0.6426061987876892
+    }
+  },
+  {
+    "text": "bb",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.4317629039287567
+    }
+  },
+  {
+    "text": "oui, pourquoi pas !",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "chitchat",
+      "confidence": 0.9750295877456665
+    }
+  },
+  {
+    "text": "pas question !",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "intent_evenement",
+      "confidence": 0.3177599012851715
+    }
+  },
+  {
+    "text": "c'est pas la forme",
+    "intent": "mood_unhappy",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.9217509627342224
+    }
+  },
+  {
+    "text": "aide-moi alors",
+    "intent": "help",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.6428043842315674
+    }
+  }
+]

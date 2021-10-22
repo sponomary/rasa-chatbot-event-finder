@@ -1,0 +1,35 @@
+version: "2.0"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'You are welcome' anytime the user says thank you
+  steps:
+  - intent: thankyou
+  - action: utter_youarewelcome
+
+- rule: Give the time anytime the user asks but reask if he wants to go out
+  steps:
+  - intent: get_time
+  - action: action_show_time
+  - action: utter_help
+
+- rule: Propose help anytime user asks for help
+  steps:
+  - intent: help
+  - action: utter_help
+
+- rule: Respond to chitchat
+  steps:
+  - intent: chitchat
+  - action: utter_chitchat
+
+- rule: Implementation of the Two-Stage-Fallback
+  steps:
+  - intent: nlu_fallback
+  - action: action_two_stage_fallback
+  - active_loop: action_two_stage_fallback

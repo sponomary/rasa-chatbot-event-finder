@@ -1,0 +1,10 @@
+[
+  {
+    "text": "qui es-tu ?",
+    "intent_response_key_target": "chitchat/bot_challenge",
+    "intent_response_key_prediction": {
+      "name": "chitchat/crazy",
+      "confidence": 0.9818434119224548
+    }
+  }
+]

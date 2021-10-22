@@ -1,0 +1,34 @@
+{
+  "evenement": {
+    "precision": 1.0,
+    "recall": 0.9666666666666667,
+    "f1-score": 0.983050847457627,
+    "support": 30,
+    "confused_with": {}
+  },
+  "date": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 14,
+    "confused_with": {}
+  },
+  "micro avg": {
+    "precision": 1.0,
+    "recall": 0.9772727272727273,
+    "f1-score": 0.9885057471264368,
+    "support": 44
+  },
+  "macro avg": {
+    "precision": 1.0,
+    "recall": 0.9833333333333334,
+    "f1-score": 0.9915254237288136,
+    "support": 44
+  },
+  "weighted avg": {
+    "precision": 1.0,
+    "recall": 0.9772727272727273,
+    "f1-score": 0.9884437596302004,
+    "support": 44
+  }
+}

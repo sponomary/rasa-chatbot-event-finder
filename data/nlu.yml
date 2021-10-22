@@ -1,0 +1,247 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - coucou
+    - bonjour
+    - hello
+    - Hello
+    - hey
+    - hi
+    - ça va ?
+    - ça va bien ?
+    - quoi de neuf ?
+    - bonjour, comment ça va ?
+    - yo
+    - ça roule ?
+    - Coucou
+    - Je dis coucou bot
+    - yo, ça roule ?
+- intent: goodbye
+  examples: |
+    - salut
+    - au revoir
+    - bonne journée
+    - bonne soirée
+    - bonne après-midi
+    - bonne nuit
+    - à bientôt
+    - à plus
+    - à plus tard
+    - à demain
+    - à la prochaine
+    - bb
+    - Au revoir, bonne chance !
+    - bye bye alors
+- intent: affirm
+  examples: |
+    - oui
+    - ouiiiiiii
+    - y
+    - bien sûr
+    - d'accord
+    - je suis d'accord
+    - parfait
+    - c'est parfait
+    - ok
+    - O.K.
+    - ouais
+    - tout à fait
+    - j'accepte
+    - ça marche
+    - affirmatif
+    - c'est correct
+    - correct
+    - c'est ça
+    - oui, je veux bien
+    - oui, j'aimerais bien
+    - Ok
+    - c'est une bonne idée !
+    - oui, pourquoi pas !
+    - d'accord, allons-y
+- intent: deny
+  examples: |
+    - non
+    - n
+    - jamais
+    - je ne suis pas d'accord
+    - non, merci
+    - nan
+    - niet
+    - je ne crois pas
+    - je crois pas
+    - absolument pas
+    - des clous !
+    - pas question !
+    - je veux rien de tout ça
+- intent: indifference
+  examples: |
+    - je ne sais pas
+    - je sais pas
+    - aucune idée
+    - je ne suis pas certain
+    - je ne suis certain
+    - je m'en fous !
+    - Je ne sais pas
+    - aucune idée, Lucie
+- intent: thankyou
+  examples: |
+    - merci
+    - merci beaucoup
+    - merci bcp
+    - je vous remercie
+    - je vous remercie de votre aide
+    - Merci beaucoup, tu m'as vraiment aidé !
+- intent: mood_happy
+  examples: |
+    - très bien merci
+    - très bien
+    - bien
+    - je vais bien
+    - je vais bien, merci
+    - ça va bien
+    - ça va, merci
+    - ça peut aller
+    - super
+    - ça va
+    - comme un lundi
+    - bien, merci
+    - pas mal
+    - tres bien
+    - trop bien
+- intent: mood_unhappy
+  examples: |
+    - bof
+    - c'est pas la forme
+    - j'ai connu mieux
+    - une sortie me ferait du bien
+    - pas terrible
+- intent: chitchat/bot_challenge
+  examples: |
+    - êtes-vous un robot ?
+    - êtes-vous un humain ?
+    - je parle à un robot ?
+    - je parle à un humain ?
+    - comment vous appelez vous ?
+    - comment vous appelez-vous ?
+    - quel est votre nom ?
+    - comment tu t'appelles ?
+    - qui es-tu ?
+    - qui est là ?
+    - c'est quoi, ton nom ?
+    - tu est qui ?
+- intent: chitchat/get_weather
+  examples: |
+    - la météo ?
+    - fait-il beau ajourd'hui ?
+    - tu sais la météo d'ajourd'hui ?
+- intent: chitchat/crazy
+  examples: |
+    - tu es folle ?
+    - tu es folle ou quoi ?
+    - tu es dingue ?
+    - tu es cinglé !
+- intent: get_time
+  examples: |
+    - quelle heure est-il ?
+    - il est quelle heure ?
+    - l'heure ?
+- intent: help
+  examples: |
+    - j'ai besoin d'aide
+    - j'ai besoin de toi
+    - pouvez-vous m'aider ?
+    - à l'aide
+    - au secours
+    - je m'ennuie
+    - je suis mort d'ennui
+    - tu peux m'aider, s'il te plaît ?
+    - à l'aide !
+    - aide-moi alors
+- intent: intent_evenement
+  examples: |
+    - je recherche un [concert](evenement)
+    - un [concert](evenement)
+    - je souhaite voir les [concerts]{"entity": "evenement", "value": "concert"}
+    - je souhaite un [concert](evenement)
+    - je veux un [concert](evenement)
+    - j'aimerais bien voir un [concert](evenement)
+    - je recherche une [exposition](evenement)
+    - une [exposition](evenement)
+    - je souhaite voir une [exposition](evenement)
+    - je souhaite une [exposition](evenement)
+    - je veux une [exposition](evenement)
+    - j'aimerais bien voir une [exposition](evenement)
+    - je recherche un [spectacle](evenement)
+    - un [spectacle](evenement)
+    - je souhaite voir les [spectacles]{"entity": "evenement", "value": "spectacle"}
+    - je souhaite un [spectacle](evenement)
+    - je veux un [spectacle](evenement)
+    - j'aimerais bien voir un [spectacle](evenement)
+    - je recherche une [animation](evenement)
+    - une [animation](evenement)
+    - je souhaite voir les [animations]{"entity": "evenement", "value": "animation"}
+    - je souhaite une [animation](evenement)
+    - je veux une [animation](evenement)
+    - j'aimerais bien voir une [animation](evenement)
+    - [Concert](evenement)
+    - une [expo]{"entity": "evenement", "value": "exposition"}
+    - [exposition](evenement)
+    - [Concert]{"entity": "evenement", "value": "concert"}
+    - je veux assister à un [concert](evenement)
+    - [concert](evenement)
+    - [concert](evenement)
+    - une [expo]{"entity": "evenement", "value": "exposition"}
+- intent: intent_date
+  examples: |
+    - [20/05/2021](date)
+    - a la date du [20/05/2021](date)
+    - le [20/05/2021](date)
+    - [30/05/2021](date)
+    - [01/06/2021](date)
+    - [20/11/2021](date)
+    - [21/11/2021](date)
+    - je veux sortir au [12/07/2021](date)
+    - je sors [19/08/2021](date)
+    - cherche pour la date de [25//2021](date)
+    - [20/11/1992](date)
+    - [25/12/2021](date)
+    - [22/05/2021](date)
+    - [23/05/2021](date)
+- intent: try_again
+  examples: |
+    - j'aimerais bien essayer encore une fois
+    - encore !
+    - je veux reessayer
+    - refaire la recherche
+    - rechercher à nouveau
+    - on peux recommencer ?
+    - encore un essai
+    - reessayer
+- intent: disappointment
+  examples: |
+    - c'est nul
+    - tu es nulle
+    - ça mparche pas
+    - tu sers à rien
+- intent: chitchat
+  examples: |
+    - tu es folle ?
+    - je parle à un humain ?
+    - la météo ?
+    - tu es dingue ?
+- synonym: concert
+  examples: |
+    - concerts
+    - Concert
+- synonym: spectacle
+  examples: |
+    - spectacles
+- synonym: animation
+  examples: |
+    - animations
+- synonym: exposition
+  examples: |
+    - expo
+    - expos
+    - expositions

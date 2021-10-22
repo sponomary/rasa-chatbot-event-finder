@@ -1,0 +1,14 @@
+[
+  {
+    "text": "une expo",
+    "entities": [
+      {
+        "start": 4,
+        "end": 8,
+        "value": "exposition",
+        "entity": "evenement"
+      }
+    ],
+    "predicted_entities": []
+  }
+]
